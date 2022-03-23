@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
             rb.AddForce(new Vector2(rb.velocity.x, Jump));
         }
     }
-
+//Allows character to jump
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Ground"))
@@ -34,6 +34,8 @@ public class PlayerMovement : MonoBehaviour
             IsJumping = false;
         }
     }
+    
+    //
     private void OnCollisionExit2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Ground"))
