@@ -33,7 +33,6 @@ public class EndLevel : MonoBehaviour {
 			animator.SetLayerWeight(animator.GetLayerIndex("Pole"), 1);
 			animator.SetBool("isMega", poweredUp);
 			topPole = player.transform.position.y;
-			AudioManager.PlaySound(AudioManager.main.flag, 1);
 			Camera.main.GetComponent<AudioSource>().Stop();
 		} else if (flagFrame < 70) {
 			player.transform.position = new Vector2(195, Mathf.Lerp(topPole, -3f, flagFrame / 70f));
@@ -55,7 +54,7 @@ public class EndLevel : MonoBehaviour {
 				animator.SetLayerWeight(animator.GetLayerIndex("Mini"), 1);
 			}
 			animator.SetBool("isMega", poweredUp);
-			AudioManager.PlaySound(AudioManager.main.win, 1);
+			
 		} else if (flagFrame < 200) {
 			player.transform.position = new Vector2(Mathf.Lerp(196, 200, (flagFrame - 100) / 100f), -5 + player.dimensions.y / 2);
 		} else if (flagFrame == 200) {
