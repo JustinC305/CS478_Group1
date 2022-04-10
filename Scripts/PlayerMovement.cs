@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     public float Jump;
     public bool IsJumping;
-   
+    
 
     // Update is called once per frame
     void Update()
